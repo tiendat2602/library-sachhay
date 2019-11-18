@@ -2,21 +2,82 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+a:hover {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar {
+  border-bottom: 1px solid #e5e5e5;
 }
 
-.App-link {
-  color: #09d3ac;
+nav-item:hover {
+  background-color: #f4f0f0;
+}
+.dropdown-menu a {
+  color: #007bff;
+}
+
+.dropdown-item:hover {
+  background-color: #f4f0f0;
+  text-decoration: none;
+}
+
+.nav-item {
+  margin: 0px 30px;
+}
+
+.jumbotron p {
+   font-weight: 400;
+   font-size: 21px;
+}
+
+.footer {
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer p {
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+
+.card {
+  border: none;
+  padding-top: 20px;
+}
+
+.maincard {
+  border: 1px solid #e5e5e5;
+  padding: 0;
+}
+
+.sidebar-card {
+  padding: 0;
+  border: 1px solid #e5e5e5;
+}
+
+div.row.mb-5 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+div.col-md-9 {
+  padding-left: 0;
+}
+
+div.col-md-3 {
+  padding-right: 0;
+  padding-left: 15px; 
+}
+
+.img-thumbnail {
+  height: 273px;
+}
+
+.sidebar-card div.card-body {
+  padding-left: 0px;
+}
+
+.sidebar-card ul {
+  padding-left: 0px;
+  margin-left: 0px;
 }

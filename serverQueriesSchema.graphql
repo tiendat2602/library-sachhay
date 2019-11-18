@@ -1,0 +1,12 @@
+type category {cate_name: String!, cate_slug: String!, cate_link: String!}
+
+type book {id: ID!, title: String!, author: String!, cateName: String!, description: String!, 
+	bookImage: String!, cateSlug: String!, bookSlug: String!}
+
+type bookPage { totalSize:Int!, books(sort: String, page: Int, pageSize: Int): [book]}
+
+type Query {
+	book(id: ID!): book
+	books(cateName: String, sort: String, page: Int, pageSize: Int): bookPage
+	categories:[category]
+}

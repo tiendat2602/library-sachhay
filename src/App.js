@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import "bootstrap/dist/css/bootstrap.css";
 import './App.css';
+import { BooksDataStore } from './data/DataStore';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'; 
+import { BooksConnector } from './books/BooksConnector';
+import { Admin } from './admin/Admin';
+import { AuthProviderImpl } from "./auth/AuthProviderImpl";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default class App extends Component {
+    render() {
+      return <Provider store={ BooksDataStore }>
+              <AuthProviderImpl>
+                <Router>
+                  <Switch>
+                    <Route path="/admin" component={Admin} />
+                    <Route path="/" component={BooksConnector}/>
+                  </Switch>
+                </Router>
+              </AuthProviderImpl>
+    </Provider>
+  }
 }
-
-export default App;

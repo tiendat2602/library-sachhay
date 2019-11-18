@@ -1,0 +1,15 @@
+input bookStore {
+	title: String!, author: String!, cateName: String!, bookImage: String!, description: String!,
+	cateSlug: String!, bookSlug: String! 
+}
+
+input bookUpdate {
+	id: ID!, title: String, author: String, cateName: String, bookImage: String, 
+	description: String, cateSlug: String, bookSlug: String
+}
+
+type Mutation{
+	storeBook(book: bookStore): book
+	updateBook(book: bookUpdate): book
+	deleteBook(id: ID!): book
+}
