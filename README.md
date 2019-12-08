@@ -1,5 +1,9 @@
 This project about library with thousands books
 
+To run this project go to sachhay folder and run command 
+
+### `node server.js ./books.json 4000`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
