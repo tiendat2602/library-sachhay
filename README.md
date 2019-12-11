@@ -1,6 +1,10 @@
 This project about library with thousands books
 
-To run this project go to sachhay folder and run command 
+To run this project go to sachhay folder and run command
+
+### `npm run build` 
+
+Then run command
 
 ### `node server.js ./books.json 4000`
 
